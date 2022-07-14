@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
           // pass the gifs as an object into the home page
           res.render('home', { gifs })
       }).catch(console.error);
-
+});
 app.get('/greetings/:name', (req, res) => {
   // grab the name from the path provided
   const name = req.params.name;
