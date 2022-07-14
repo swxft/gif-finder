@@ -18,6 +18,9 @@ const Tenor = require("tenorjs").client({
 });
 // Routes
 // example URL "http://localhost:3000/?term=hey"
+app.get('/public/style.css', (req, res) => {
+  res.sendFile(__dirname + '/public/styles.css')
+})
 app.get('/', (req, res) => {
   // console.log(req.query) // => "{ term: hey" }[/bold]
   //   res.render('home')
